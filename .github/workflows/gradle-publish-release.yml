@@ -1,0 +1,15 @@
+name: Gradle Publish Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]*.[0-9]*.[0-9]*"    # pattern for v1.2.3
+      - "v[0-9]*.[0-9]*.[0-9]*-*"  # pattern for v1.2.3-suffix
+
+jobs:
+  publish-release:
+    name: Publish Release
+    uses: problem4j/problem4j-workflows/.github/workflows/gradle-publish-release.yml@main
+    with:
+      publish-task: publishAllPublicationsToCentralPortal
+    secrets: inherit
