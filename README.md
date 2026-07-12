@@ -1,8 +1,9 @@
 # Problem4J Gson
 
+[![Codecov](https://codecov.io/gh/problem4j/problem4j-gson/graph/badge.svg?token=Ffs7DFxCe3)](https://codecov.io/gh/problem4j/problem4j-gson)
 [![Build Status](https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml)
 [![Sonatype](https://img.shields.io/maven-central/v/io.github.problem4j/problem4j-gson)][maven-central]
-[![License](https://img.shields.io/github/license/problem4j/problem4j-gson)](https://github.com/problem4j/problem4j-gson/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/problem4j/problem4j-gson/blob/main/LICENSE)
 
 Gson integration module for [`problem4j-core`][problem4j-core]. Provides easy support for serializing and deserializing
 the `Problem` model using [Gson][gson]'s `GsonBuilder`.
