@@ -168,16 +168,7 @@ final class ProblemTypeAdapter extends TypeAdapter<Problem> {
   }
 
   private int readStatus(JsonReader in) throws IOException {
-    JsonToken token = in.peek();
-    if (token == JsonToken.BOOLEAN) {
-      in.nextBoolean();
-      return 0;
-    }
-    if (token == JsonToken.NULL) {
-      in.nextNull();
-      return 0;
-    }
-    if (token == JsonToken.NUMBER) {
+    if (in.peek() == JsonToken.NUMBER) {
       return (int) in.nextDouble();
     }
     in.skipValue();
