@@ -35,8 +35,4 @@ module io.github.problem4j.gson {
   requires transitive io.github.problem4j.core;
 
   exports io.github.problem4j.gson;
-
-  // opens the package to Gson for reflection-based access when needed
-  opens io.github.problem4j.gson to
-      com.google.gson;
 }
