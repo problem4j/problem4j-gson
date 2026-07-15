@@ -27,6 +27,16 @@ import org.jspecify.annotations.Nullable;
  * Gson {@link TypeAdapterFactory} for {@link Problem}. Register this factory with your {@code
  * GsonBuilder} to enable serialization and deserialization of {@link Problem} instances.
  *
+ * <p>The produced {@link TypeAdapter} handles serialization and deserialization of RFC 7807 Problem
+ * objects.
+ *
+ * <p>Serialization produces a JSON object with the standard Problem fields ({@code type}, {@code
+ * title}, {@code status}, {@code detail}, {@code instance}) followed by any custom extension
+ * members. Fields with {@code null} or default values ({@link Problem#BLANK_TYPE}) are omitted.
+ *
+ * <p>Deserialization reads a JSON object and maps standard fields to a {@link Problem} built via
+ * {@link Problem#builder()}. Unknown fields are collected as extension members.
+ *
  * <p>Usage example:
  *
  * <pre>{@code
@@ -51,11 +61,12 @@ public final class ProblemTypeAdapterFactory implements TypeAdapterFactory {
    * @since 1.0.0
    */
   @Override
-  @SuppressWarnings("unchecked")
   public @Nullable <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
     if (!Problem.class.isAssignableFrom(type.getRawType())) {
       return null;
     }
-    return (TypeAdapter<T>) new ProblemTypeAdapter(gson);
+    @SuppressWarnings("unchecked")
+    TypeAdapter<T> result = (TypeAdapter<T>) new ProblemTypeAdapter(gson);
+    return result;
   }
 }

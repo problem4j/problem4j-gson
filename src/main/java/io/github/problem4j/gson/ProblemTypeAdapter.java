@@ -32,19 +32,6 @@ import java.util.Set;
 import java.util.TreeMap;
 import org.jspecify.annotations.Nullable;
 
-/**
- * Gson {@link TypeAdapter} for {@link Problem}. Handles serialization and deserialization of RFC
- * 7807 Problem objects.
- *
- * <p>Serialization produces a JSON object with the standard Problem fields ({@code type}, {@code
- * title}, {@code status}, {@code detail}, {@code instance}) followed by any custom extension
- * members. Fields with {@code null} or default values ({@link Problem#BLANK_TYPE}) are omitted.
- * Extension members whose names clash with standard field names are silently skipped.
- *
- * <p>Deserialization reads a JSON object and maps standard fields to a {@link Problem} built via
- * {@link Problem#builder()}. Unknown fields are collected as extension members. Extension values
- * follow Gson's configured number strategy (see {@link com.google.gson.ToNumberPolicy}).
- */
 final class ProblemTypeAdapter extends TypeAdapter<Problem> {
 
   private static final String TYPE = "type";
