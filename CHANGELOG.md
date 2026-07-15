@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog][keepachangelog], and this project adhe
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-15
+
 ### Added
 
 - Add `ProblemTypeAdapterFactory` to bridge Gson with Problem4J.
