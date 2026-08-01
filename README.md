@@ -1,9 +1,11 @@
-# Problem4J Gson
+<h1 align="center">Problem4J Gson</h1>
 
-[![Codecov](https://codecov.io/gh/problem4j/problem4j-gson/graph/badge.svg?token=Ffs7DFxCe3)](https://codecov.io/gh/problem4j/problem4j-gson)
-[![Build Status](https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml)
-[![Sonatype](https://img.shields.io/maven-central/v/io.github.problem4j/problem4j-gson)][maven-central]
-[![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/problem4j/problem4j-gson/blob/main/LICENSE)
+<p align="center">
+  <a href="https://codecov.io/gh/problem4j/problem4j-gson"><img src="https://codecov.io/gh/problem4j/problem4j-gson/graph/badge.svg?token=Ffs7DFxCe3" alt="Codecov"></a>
+  <a href="https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml"><img src="https://github.com/problem4j/problem4j-gson/actions/workflows/gradle-build.yml/badge.svg" alt="Build Status"></a>
+  <a href="https://central.sonatype.com/artifact/io.github.problem4j/problem4j-gson"><img src="https://img.shields.io/maven-central/v/io.github.problem4j/problem4j-gson" alt="Sonatype"></a>
+  <a href="https://github.com/problem4j/problem4j-gson/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-green" alt="License"></a>
+</p>
 
 Gson integration module for [`problem4j-core`][problem4j-core]. Provides easy support for serializing and deserializing
 the `Problem` model using [Gson][gson]'s `GsonBuilder`.
