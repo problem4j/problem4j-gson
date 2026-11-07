@@ -1,9 +1,7 @@
 import com.diffplug.spotless.LineEnding
 
 plugins {
-    id("internal.errorprone-convention")
     id("internal.idea-convention")
-    id("internal.jacoco-convention")
     id("internal.java-library-convention")
     id("internal.mrjar-module-info-convention")
     id("internal.publishing-convention")
@@ -31,7 +29,7 @@ dependencies {
 }
 
 // see build-logic/src/main/kotlin/internal.publishing-convention.gradle.kts
-internalPublishing {
+internalBuild {
     displayName = "Problem4J Gson"
     description = "Gson integration for library implementing RFC7807 (and RFC9457)"
 }
