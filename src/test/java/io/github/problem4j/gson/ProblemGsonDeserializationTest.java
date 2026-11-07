@@ -53,7 +53,8 @@ class ProblemGsonDeserializationTest extends AbstractProblemGsonTest {
   @ValueSource(strings = {"http://exa mple.com", "http://example.com/<>", "http://[::1"})
   @NullSource
   void givenTypeInvalidUri_whenDeserializing_shouldDeserializeWithBlankType(String type) {
-    Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
+    Gson gson =
+        new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
 
     String json =
         """
@@ -78,7 +79,8 @@ class ProblemGsonDeserializationTest extends AbstractProblemGsonTest {
   @ValueSource(strings = {"\"string\"", "false", "true"})
   @NullSource
   void givenInvalidStatus_whenDeserializing_shouldDeserializeToZero(String status) {
-    Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
+    Gson gson =
+        new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
 
     String json =
         """

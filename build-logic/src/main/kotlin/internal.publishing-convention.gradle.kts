@@ -57,7 +57,8 @@ publishing {
                 }
                 scm {
                     connection = property("internal.pom.scm.connection") as String
-                    developerConnection = property("internal.pom.scm.developer-connection") as String
+                    developerConnection =
+                        property("internal.pom.scm.developer-connection") as String
                     url = property("internal.pom.scm.url") as String
                 }
                 issueManagement {

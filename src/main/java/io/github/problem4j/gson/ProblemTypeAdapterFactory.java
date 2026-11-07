@@ -24,17 +24,18 @@ import io.github.problem4j.core.Problem;
 import org.jspecify.annotations.Nullable;
 
 /**
- * Gson {@link TypeAdapterFactory} for {@link Problem}. Register this factory with your {@code GsonBuilder} to enable
- * serialization and deserialization of {@link Problem} instances.
+ * Gson {@link TypeAdapterFactory} for {@link Problem}. Register this factory with your {@code
+ * GsonBuilder} to enable serialization and deserialization of {@link Problem} instances.
  *
- * <p>The produced {@link TypeAdapter} handles serialization and deserialization of RFC 7807 Problem objects.
+ * <p>The produced {@link TypeAdapter} handles serialization and deserialization of RFC 7807 Problem
+ * objects.
  *
- * <p>Serialization produces a JSON object with the standard Problem fields ({@code type}, {@code title}, {@code
- * status}, {@code detail}, {@code instance}) followed by any custom extension members. Fields with {@code null} or
- * default values ({@link Problem#BLANK_TYPE}) are omitted.
+ * <p>Serialization produces a JSON object with the standard Problem fields ({@code type}, {@code
+ * title}, {@code status}, {@code detail}, {@code instance}) followed by any custom extension
+ * members. Fields with {@code null} or default values ({@link Problem#BLANK_TYPE}) are omitted.
  *
- * <p>Deserialization reads a JSON object and maps standard fields to a {@link Problem} built via {@link
- * Problem#builder()}. Unknown fields are collected as extension members.
+ * <p>Deserialization reads a JSON object and maps standard fields to a {@link Problem} built via
+ * {@link Problem#builder()}. Unknown fields are collected as extension members.
  *
  * <p>Usage example:
  *
@@ -50,8 +51,8 @@ import org.jspecify.annotations.Nullable;
 public final class ProblemTypeAdapterFactory implements TypeAdapterFactory {
 
   /**
-   * Creates a {@link TypeAdapter} for the given type if it is assignable from {@link Problem}, otherwise returns {@code
-   * null} to signal that this factory cannot handle the type.
+   * Creates a {@link TypeAdapter} for the given type if it is assignable from {@link Problem},
+   * otherwise returns {@code null} to signal that this factory cannot handle the type.
    *
    * @param gson the {@link Gson} instance requesting the adapter
    * @param type the type token describing the requested type

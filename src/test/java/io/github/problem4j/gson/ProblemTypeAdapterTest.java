@@ -27,7 +27,8 @@ import org.junit.jupiter.api.Test;
 
 class ProblemTypeAdapterTest {
 
-  private final Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
+  private final Gson gson =
+      new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
 
   @Test
   void givenTypeAsNumber_whenDeserializing_thenTypeShouldBeBlank() {
@@ -160,7 +161,11 @@ class ProblemTypeAdapterTest {
   @Test
   void givenExtensionWithNullValue_whenSerializing_thenExtensionShouldBeIgnored() {
     Problem problem =
-        Problem.builder().title("Hello World").status(99).extension(Problem.extension("custom", null)).build();
+        Problem.builder()
+            .title("Hello World")
+            .status(99)
+            .extension(Problem.extension("custom", null))
+            .build();
 
     String json = gson.toJson(problem, Problem.class);
 

@@ -19,11 +19,11 @@ import org.jspecify.annotations.NullMarked;
 /**
  * Gson integration module for RFC 7807 Problem objects.
  *
- * <p>This module provides Gson integration for serializing and deserializing RFC 7807 Problem objects. It declares an
- * optional dependency on Gson, making it optional for module resolution.
+ * <p>This module provides Gson integration for serializing and deserializing RFC 7807 Problem
+ * objects. It declares an optional dependency on Gson, making it optional for module resolution.
  *
- * <p>The module exports the {@code io.github.problem4j.gson} package and provides the {@code ProblemTypeAdapterFactory}
- * for registering with a Gson instance.
+ * <p>The module exports the {@code io.github.problem4j.gson} package and provides the {@code
+ * ProblemTypeAdapterFactory} for registering with a Gson instance.
  *
  * @see <a href="https://tools.ietf.org/html/rfc7807">RFC 7807: Problem Details for HTTP APIs</a>
  * @see io.github.problem4j.gson.ProblemTypeAdapterFactory

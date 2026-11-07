@@ -45,7 +45,8 @@ abstract class AbstractProblemGsonTest {
           + "\"userid\":100"
           + "}";
 
-  protected final Instant timestamp = LocalDateTime.of(2018, 10, 1, 10, 43, 21, 221000000).toInstant(ZoneOffset.UTC);
+  protected final Instant timestamp =
+      LocalDateTime.of(2018, 10, 1, 10, 43, 21, 221000000).toInstant(ZoneOffset.UTC);
 
   // Extensions use Long for numeric values to match Gson's LONG_OR_DOUBLE deserialization strategy
   protected final Problem problem =
@@ -80,7 +81,9 @@ abstract class AbstractProblemGsonTest {
             .registerTypeHierarchyAdapter(
                 Problem.class,
                 new ProblemTypeAdapter(
-                    new GsonBuilder().setObjectToNumberStrategy(ToNumberPolicy.LONG_OR_DOUBLE).create()))
+                    new GsonBuilder()
+                        .setObjectToNumberStrategy(ToNumberPolicy.LONG_OR_DOUBLE)
+                        .create()))
             .create();
     return Stream.of(Arguments.of(factoryGson), Arguments.of(directAdapterGson));
   }
