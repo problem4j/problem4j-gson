@@ -17,10 +17,9 @@
 /**
  * Gson integration module for RFC 7807 Problem objects.
  *
- * <p>This package provides Gson serialization and deserialization support for RFC 7807 Problem
- * objects. Register {@link io.github.problem4j.gson.ProblemTypeAdapterFactory} with a {@code
- * GsonBuilder} to enable transparent handling of {@link io.github.problem4j.core.Problem}
- * instances.
+ * <p>This package provides Gson serialization and deserialization support for RFC 7807 Problem objects. Register {@link
+ * io.github.problem4j.gson.ProblemTypeAdapterFactory} with a {@code GsonBuilder} to enable transparent handling of
+ * {@link io.github.problem4j.core.Problem} instances.
  *
  * @see <a href="https://tools.ietf.org/html/rfc7807">RFC 7807: Problem Details for HTTP APIs</a>
  * @see io.github.problem4j.gson.ProblemTypeAdapterFactory

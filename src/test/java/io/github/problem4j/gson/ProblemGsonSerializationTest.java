@@ -37,15 +37,10 @@ class ProblemGsonSerializationTest extends AbstractProblemGsonTest {
 
   @Test
   void givenOverlappingExtension_whenSerializing_shouldSkipExtension() {
-    Gson gson =
-        new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
+    Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
 
     Problem problem =
-        Problem.builder()
-            .title("Hello World")
-            .status(99)
-            .extension(Problem.extension("title", "extTitle"))
-            .build();
+        Problem.builder().title("Hello World").status(99).extension(Problem.extension("title", "extTitle")).build();
 
     String problemJson = gson.toJson(problem, Problem.class);
 
@@ -54,15 +49,10 @@ class ProblemGsonSerializationTest extends AbstractProblemGsonTest {
 
   @Test
   void givenExtensionWithNullValue_whenSerializing_shouldSkipExtension() {
-    Gson gson =
-        new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
+    Gson gson = new GsonBuilder().registerTypeAdapterFactory(new ProblemTypeAdapterFactory()).create();
 
     Problem problem =
-        Problem.builder()
-            .title("Hello World")
-            .status(99)
-            .extension(Problem.extension("extension", null))
-            .build();
+        Problem.builder().title("Hello World").status(99).extension(Problem.extension("extension", null)).build();
 
     String problemJson = gson.toJson(problem, Problem.class);
 
