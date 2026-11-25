@@ -44,7 +44,7 @@ nmcp {
 }
 
 spotless {
-    val licenseHeader = "${rootProject.rootDir}/gradle/license-header.java"
+    val licenseHeader = "${rootProject.rootDir}/gradle/license-header.txt"
 
     java {
         target("**/src/**/*.java")
